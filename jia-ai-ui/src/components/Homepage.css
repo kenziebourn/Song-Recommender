@@ -1,0 +1,22 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.welcome h1 {
+    font-size: 75px;
+}
+
+.icons {
+    margin-top: 200px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* this adds 10 pixels of space between the icons */
+    font-size: 30px;
+}
+
+select {
+    font-family: 'Poppins';
+}
+
