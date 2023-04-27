@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
@@ -12,12 +12,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>
-          JIA AI
+          JIA.ai
         </h1>
       </header>
       <BrowserRouter>
         <Routes>
-          <Route path='/Signup' element={<Signup />} />
+          <Route path='/' element= {<Signup />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Homepage' element={<Homepage />} />
           <Route path='/Results1' element={<Results1 />} />

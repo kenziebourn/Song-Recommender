@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Signup.css';
 import { BsPersonCircle } from 'react-icons/bs';
 
-//This is the Signup page//
+//This is the Signup page which is also the landing page//
 function Signup() {
   const navigate = useNavigate();
   // Function used to handle form submission //

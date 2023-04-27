@@ -4,17 +4,33 @@ import { BsQuestionCircle } from "react-icons/bs";
 import { MdOutlineExitToApp } from "react-icons/md";
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
 import './Homepage.css';
+import { useState } from 'react';
 
 function Homepage() {
   const navigate = useNavigate();
 
   // Function used to handle form submission //
-  // Returns results page after user enters song or selects genre // 
-  const handleSubmit = (event) => {
+  // Returns results page after user enters song //
+  const [recommendations, setRecommendations] = useState([]); 
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate('/Results1');
+  
+     // userInput represents the song and artist the user has entered
+    const userInput = document.getElementById("userInput").value;
+  
+    // Send request to backend with userInput
+    fetch(`http://localhost:3001/Results1/${userInput}`)
+      .then(response => response.json()) // response from server converted to JSON format
+      // if operation successful, then function navigates to results page and passes fetched data
+      .then(data => {
+        navigate('/Results1', { state: { recommendations: data } });
+        setRecommendations(data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
-
+    
   // Function used to handle clicking on question icon //
   // Navigates user to contact form // 
   const handleClick1 = (event) => {
@@ -28,11 +44,11 @@ function Homepage() {
     event.preventDefault();
     navigate('/Login');
   }
-
+  
   return(
     <>
     <div className="welcome">
-    <h1>WELCOME TO JIA AI</h1>
+    <h1>WELCOME TO JIA.ai</h1>
     <h2>To get started, please enter a song name and artist to generate song recommendations </h2>
     <div/>
     <div className="submit">

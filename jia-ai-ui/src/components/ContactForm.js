@@ -3,7 +3,7 @@ import { BiCheckCircle } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import './ContactForm.css';
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/bef73fd0-e000-11ed-bc58-ed7c0e861dff"; // TODO - fill on the later step
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/bef73fd0-e000-11ed-bc58-ed7c0e861dff"; 
 
 const ContactForm = () => {
 
