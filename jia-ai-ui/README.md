@@ -4,21 +4,32 @@ JIA.ai is a web-based song recommendation application that utilizes OpenAI's API
 
 ## Features
 
-Song recommendation based on user input
-Song genre selection for generating suggestions
-User account creation and login
-MVC architecture
-REST API for handling requests
-Database for storing user information
+-Song recommendation based on user input
+
+-Song genre selection for generating suggestions
+
+-User account creation and login
+
+-MVC architecture
+
+-REST API for handling requests
+
+-Database for storing user information
 
 ### Technologies Used
 
 -OpenAI API for song recommendation generation
+
 -Node.js for server-side development
+
 -Express.js for REST API development
+
 -MongoDB for database storage
+
 -Passport.js for user authentication
+
 -ReactJS for front-end development
+
 -HeroTofu API for contact form submission 
 
 #### Usage
