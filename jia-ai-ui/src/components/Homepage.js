@@ -3,7 +3,6 @@ import { FiSend } from "react-icons/fi";
 import { BsQuestionCircle } from "react-icons/bs";
 import { MdOutlineExitToApp } from "react-icons/md";
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
-import './Homepage.css';
 import { useState } from 'react';
 
 function Homepage() {
@@ -45,48 +44,50 @@ function Homepage() {
     navigate('/Login');
   }
   
-  return(
+  return (
     <>
-    <div className="welcome">
-    <h1>WELCOME TO JIA.ai</h1>
-    <h2>To get started, please enter a song name and artist to generate song recommendations </h2>
-    <div/>
-    <div className="submit">
-    <form onSubmit={handleSubmit}>
-    <label>
-      <input type="text" id="userInput" name="userInput" placeholder="Ex: Paradise by Coldplay"/>
-      <button type="submit">
-        <FiSend/>
-      </button>
-    </label> 
-    </form>
-    </div>
-    <h2>Don't have a specific song in mind?
-      Select a genre and we'll take it from here.
-    </h2>
-    <form onSubmit={handleSubmit}>
-       <select>
-       <option value="Hip Hop">Hip Hop</option>
-       <option value="Pop">Pop</option>
-       <option value="Jazz">Jazz</option>
-       <option value="Techno">Techno</option>
-       <option value="House">House</option>
-       <option value="Rock">Rock</option>
-       <option value="Country">Country</option>
-       <option value="R&B">R&B</option>
-       <option value="Latin">Latin</option>
-       <option value="Classical">Classical</option>
-     </select>
-     <button type="submit">Submit</button>
-     </form>
-     <div className="icons">
-     <BsQuestionCircle onClick={handleClick1}/>
-     <MdOutlineExitToApp onClick={handleClick2}/>
-     </div>
-    </div>
+      <div className="font-semibold text-9xl mt-3 ml-10 text-left">
+        <h1 className="text-white">Introducing</h1><h1>JIA.ai</h1>
+      </div>
+      <div class="border-2 border-black mt-10 ml-10 mr-10 "></div>
+      <div className="mt-10 ml-10 text-left text-2xl">
+        <h2>To get started, please enter a song name and artist to generate song recommendations</h2>
+      </div>
+      <div className="flex mt-5 ml-10 text-left text-1xl items-center">
+        <form onSubmit={handleSubmit}>
+          <label className="flex items-center">
+            <input class="rounded py-2 px-3 shadow-md" type="text" id="userInput" name="userInput" placeholder="Ex: Paradise by Coldplay"/>
+            <button class="bg-white ml-2 py-2 px-3 rounded shadow-md" type="submit">
+              <FiSend size={24}/>
+            </button>
+          </label>
+        </form>
+      </div>
+      <div className="mt-5 ml-10 text-left text-2xl" >
+      <h2>Don't have a specific song in mind? Select a genre and we'll take it from here.</h2></div>
+      <div className="flex mt-2 ml-10 text-left text-1xl items-center" >
+      <form onSubmit={handleSubmit} className="flex items-center shadow-md">
+        <select class="rounded py-2 px-3 shadow-md">
+          <option value="Hip Hop">Hip Hop</option>
+          <option value="Pop">Pop</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Techno">Techno</option>
+          <option value="House">House</option>
+          <option value="Rock">Rock</option>
+          <option value="Country">Country</option>
+          <option value="R&B">R&B</option>
+          <option value="Latin">Latin</option>
+          <option value="Classical">Classical</option>
+        </select>
+        <button class="rounded bg-white py-2 px-3 ml-2" type="submit">Submit</button>
+      </form>
+      </div>
+      <div className="mt-10 ml-10 flex items-center">
+        <BsQuestionCircle size={30} onClick={handleClick1} className="mr-5" />
+        <MdOutlineExitToApp size={30} onClick={handleClick2}/>
+      </div>
     </>
-  );
-}
-
+  )
+};
 
 export default Homepage;

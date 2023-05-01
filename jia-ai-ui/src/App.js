@@ -7,12 +7,14 @@ import ContactForm from './components/ContactForm';
 import Signup from './components/Signup';
 import Results1 from './components/Results1';
 
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          JIA.ai
+    <div className="bg-gradient-to-r from-ocean via-mint to-sun min-h-screen">
+      <header className="flex items-center ml-2">
+      <img className="mt-1 w-6 h-6" src="/vinylrecord.png" alt="image" />
+        <h1 className="mt-1 ml-1 font-semibold">
+          JIA
         </h1>
       </header>
       <BrowserRouter>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import './Results1.css';
+
 
 const Results1 = () => {
   const location = useLocation();  // Using the useLocation hook to get the current location

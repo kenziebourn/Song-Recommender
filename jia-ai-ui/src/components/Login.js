@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import './Login.css';
+
 
 //This is the Login page//
 
