@@ -9,14 +9,14 @@ const Results1 = () => {
   console.log(recommendations); // represents the response from the AI 
   
   return (
-    <div className='results'>
-    <div>Based on your search, we think you'd like:</div>
+    <div className="text-center mt-20">
+    <div className= "font-semibold text-3xl">Based on your search, we think you'd like:</div>
     <br/>
-    <div className="songrecs">
+    <div className="text-lg">
       {recommendations} 
       </div>
       <br/>
-    <div><p>Click <Link to="/Homepage">here</Link> to return home.</p></div>
+    <div className="mt-20"><p>Click <Link to="/Homepage"  className="underline">here</Link> to return home.</p></div>
     </div>
   )
 };

@@ -14,25 +14,25 @@ function Signup() {
   }
 
   return(
-    <div className="signup-wrapper">
-      <BsPersonCircle size={40}/>
-      <h1>Create Account</h1>
+    <div className="text-center items-center mt-12">
+      <BsPersonCircle size={40} className="" />
+      <h1 className='text-3xl font-medium mb-8'>Create Account</h1>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Email</p>
-          <input type="text" />
+          <input className= 'rounded py-2 px-3 shadow-md mb-4' type="text" />
         </label>
         <label>
           <p>Create Password</p>
-          <input type="password" />
+          <input className= 'rounded py-2 px-3 shadow-md mb-4' type="password" />
         </label>
         <label>
           <p>Reenter Password</p>
-          <input type="password" />
-          <p>Already have an Account? <Link to="/Login">Login</Link></p>
+          <input className= 'rounded py-2 px-3 shadow-md' type="password" />
+          <p className='text-sm mt-5 mb-4' >Already have an Account? <Link to="/Login" className="underline" >Login</Link></p>
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button className= 'bg-white rounded py-2 px-3 shadow-md mt-5' type="submit">Submit</button>
         </div>
       </form>
     </div>

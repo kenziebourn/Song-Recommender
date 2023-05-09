@@ -16,19 +16,19 @@ function Login() {
   }
 
   return(
-    <div className="login-wrapper">
-      <h1>Login</h1>
+    <div className="text-center mt-20">
+      <h1 className='text-3xl font-medium mb-8'>Login</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          <input type="text" placeholder="Username"/>
+          <input className= 'rounded py-2 px-3 shadow-md mb-4' type="text" placeholder="Username"/>
         </label>
         <br></br>
         <label >
-          <input type="password" placeholder="Password" />
+          <input className= 'rounded py-2 px-3 shadow-md' type="password" placeholder="Password" />
         </label>
-        <p>No Account Yet? <Link to="/">Create one</Link></p>
+        <p className='text-sm mt-5 mb-4'>No Account Yet? <Link to="/" className="underline">Create one</Link></p>
         <div>
-          <button type="submit">Submit</button>
+          <button className= 'bg-white rounded py-2 px-3 shadow-md mb-4' type="submit">Submit</button>
         </div>
       </form>
     </div>

@@ -30,8 +30,8 @@ const ContactForm = () => {
     
 
     return (
-        <div className="input">
-        <h1>Contact Us</h1>
+        <div className="text-center mt-20">
+        <h1 className="text-semibold text-3xl font-medium mb-5">Contact Us</h1>
         <form
         action={FORM_ENDPOINT}
         onSubmit={handleSubmit}
@@ -39,20 +39,20 @@ const ContactForm = () => {
         target="_blank"
         >
         <div>
-            <input type="text" placeholder="Name" name="name" required />
+            <input className= 'rounded py-2 px-3 shadow-md mb-4' type="text" placeholder="Name" name="name" required />
         </div>
         <div>
-            <input type="email" placeholder="Email" name="email" required />
+            <input className= 'rounded py-2 px-3 shadow-md mb-4' type="email" placeholder="Email" name="email" required />
         </div>
         <div>
-            <textarea placeholder="Message..." name="message" required />
+            <textarea className= 'rounded py-2 px-6 shadow-md mb-4' placeholder="Message..." name="message" required />
         </div>
         <div>
-            <button type="submit">Submit</button>
+            <button className= 'bg-white rounded py-2 px-3 shadow-md mb-4' type="submit">Submit</button>
         </div>
         <div>
             <br></br>
-        <p>Click <Link to="/Homepage">here</Link> to return home.</p>
+        <p>Click <Link to="/Homepage" className= 'underline'>here</Link> to return home.</p>
         </div>
         </form>
         </div>
