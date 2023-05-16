@@ -4,6 +4,9 @@ import { BsQuestionCircle } from "react-icons/bs";
 import { MdOutlineExitToApp } from "react-icons/md";
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../contexts/user.context';
+ 
 
 function Homepage() {
   const navigate = useNavigate();
@@ -61,9 +64,20 @@ function Homepage() {
 
   // Function used to handling clicking on logout icon //
   // Returns user to login page // 
-  const handleClick2 = (event) => {
-    event.preventDefault();
-    navigate('/Login');
+  const { logOutUser } = useContext(UserContext);
+  // This function is called when the user clicks the "Logout" button.
+  const logOut = async () => {
+  try {
+      // Calling the logOutUser function from the user context.
+      const loggedOut = await logOutUser();
+      // Now we will refresh the page, and the user will be logged out and
+      // redirected to the login page because of the <PrivateRoute /> component.
+      if (loggedOut) {
+        window.location.reload(true);
+      }
+    } catch (error) {
+      alert(error)
+    }
   }
   
   return (
@@ -105,8 +119,8 @@ function Homepage() {
       </form>
       </div>
       <div className="mt-10 ml-10 flex items-center">
-        <BsQuestionCircle size={30} onClick={handleClick1} className="mr-5" />
-        <MdOutlineExitToApp size={30} onClick={handleClick2}/>
+        <BsQuestionCircle size={30} onClick={handleClick1} className="mr-5 hover:scale-110 duration-300" />
+        <MdOutlineExitToApp size={30} onClick={logOut} className="hover:scale-110 duration-300"/>
       </div>
     </>
   )

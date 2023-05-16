@@ -11,6 +11,9 @@ module.exports = {
       'sun' : '#F8DD5D',
       'white': '#FFFFFF',
       'black' : '#000000'
+    },
+    fontFamily: {
+      'poppins': ['Poppins', 'sans-serif'] 
     }
   },
   plugins: [],

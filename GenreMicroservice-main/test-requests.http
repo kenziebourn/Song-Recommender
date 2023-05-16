@@ -1,0 +1,10 @@
+// READ ******************************************
+
+// READ: GET Request: Hip-Hop Song Recommendations
+###
+GET http://localhost:3002/genre/hip%20hop HTTP/1.1
+
+// READ: GET Request: Country Song Recommendations
+###
+GET http://localhost:3002/genre/country HTTP/1.1
+
