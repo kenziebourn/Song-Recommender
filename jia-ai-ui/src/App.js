@@ -7,8 +7,9 @@ import Login from './components/Login';
 import ContactForm from './components/ContactForm';
 import Signup from './components/Signup';
 import Results1 from './components/Results1';
+import MyRecommendations from './components/MyRecommendations';
 import PrivateRoute from "./components/PrivateRoute";
-
+import { RecommendationsProvider } from './components/RecommendationsContext';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           JIA.ai
         </h1>
       </header>
+      <RecommendationsProvider>
       <BrowserRouter>
         <UserProvider>
           <Routes>
@@ -35,9 +37,13 @@ function App() {
             <Route element={<PrivateRoute />}>
             <Route exact path="/ContactForm" element={<ContactForm />} />
             </Route>
+            <Route element={<PrivateRoute />}>
+            <Route exact path="/MyRecommendations" element={<MyRecommendations />} />
+            </Route>
           </Routes>
         </UserProvider>
       </BrowserRouter>
+      </RecommendationsProvider>
       <footer>© 2023 McKenzie Bourn</footer>
     </div>
   );

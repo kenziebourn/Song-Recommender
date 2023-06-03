@@ -2,15 +2,16 @@ import React from 'react';
 import { FiSend } from "react-icons/fi";
 import { BsQuestionCircle } from "react-icons/bs";
 import { MdOutlineExitToApp } from "react-icons/md";
+import { BsMusicNoteList } from "react-icons/bs";
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../contexts/user.context';
- 
+
 
 function Homepage() {
   const navigate = useNavigate();
-
+  
   // Function used to handle form submission //
   // Returns results page after user enters song //
   const [recommendations, setRecommendations] = useState([]); 
@@ -54,7 +55,14 @@ function Homepage() {
         console.log(error);
       });
   }
-    
+  
+  // Function used to handle clicking on list icon //
+  // Navigates user to their saved lists of songs // 
+  const viewList = (event) => {
+    event.preventDefault();
+    navigate('/MyRecommendations');
+  }
+
   // Function used to handle clicking on question icon //
   // Navigates user to contact form // 
   const handleClick1 = (event) => {
@@ -119,6 +127,7 @@ function Homepage() {
       </form>
       </div>
       <div className="mt-10 ml-10 flex items-center">
+        <BsMusicNoteList size={30} onClick = {viewList} className="mr-5 hover:scale-110 duration-300"/>
         <BsQuestionCircle size={30} onClick={handleClick1} className="mr-5 hover:scale-110 duration-300" />
         <MdOutlineExitToApp size={30} onClick={logOut} className="hover:scale-110 duration-300"/>
       </div>

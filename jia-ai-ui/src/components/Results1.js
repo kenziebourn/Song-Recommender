@@ -1,12 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
+import { RecommendationsContext } from './RecommendationsContext';
 
 const Results1 = () => {
   const location = useLocation();
   const { recommendations } = location.state;
-  
+  const { addToSavedRecommendations } = useContext(RecommendationsContext);
+
+  const handleSaveRecommendations = () => {
+    addToSavedRecommendations(recommendations);
+  };
 
   return (
     <div className="text-center mt-20">
@@ -40,6 +45,7 @@ const Results1 = () => {
       </div>
       <br />
       <div className="mt-20">
+        <p><button onClick={handleSaveRecommendations}>Save Recommendations</button></p>
         <p>
           Click <Link to="/Homepage" className="underline">here</Link> to return home.
         </p>
