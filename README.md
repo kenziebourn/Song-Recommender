@@ -1,3 +1,5 @@
+![jia_ai_cover](https://github.com/kenziebourn/Song-Recommender/assets/107959606/48510213-12a9-4a20-b75a-fe299dfb0fbb)
+
 # JIA.ai Music Recommendation App
 
 JIA.ai is a web-based song recommendation application that utilizes OpenAI's API to generate song recommendations based on user input. The user can enter a specific song, artist, or genre, and the application will generate a list of recommended songs based on the user's input.
@@ -9,6 +11,8 @@ JIA.ai is a web-based song recommendation application that utilizes OpenAI's API
 -Song genre selection for generating suggestions
 
 -User account creation and login
+
+-User saved recommendations list
 
 -MVC architecture
 
