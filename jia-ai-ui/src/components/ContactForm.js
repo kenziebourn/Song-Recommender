@@ -17,12 +17,12 @@ const ContactForm = () => {
     if (submitted) {
         return (
         <>
-        <div className="contact" >
+        <div className="flex flex-col items-center justify-center mt-20" >
         <BiCheckCircle  style={{ fontSize: '100px' }}/>
             <h1>Thank You!</h1>
             <h2>Your Message Was Successfully Submitted</h2>
             <h3>We'll be in touch soon.</h3>
-            <p>Click <Link to="/Homepage">here</Link> to return home.</p>
+            <p className='mt-20'>Click <Link to="/Homepage" className="underline">here</Link> to return home.</p>
             </div>
         </>
         );
