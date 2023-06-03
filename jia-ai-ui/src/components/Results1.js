@@ -1,18 +1,25 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import { RecommendationsContext } from './RecommendationsContext';
 
 const Results1 = () => {
+  // Access the current location and extract the recommendations from the state
   const location = useLocation();
   const { recommendations } = location.state;
   const { addToSavedRecommendations } = useContext(RecommendationsContext);
 
+  // State variable to control the visibility of the text
+  const [showText, setShowText] = useState(false); 
+
+  // Function called when user clicks save button
   const handleSaveRecommendations = () => {
     addToSavedRecommendations(recommendations);
+    setShowText(true);
   };
 
+  // Render the component
   return (
     <div className="text-center mt-20">
       <div className="font-semibold text-3xl">
@@ -44,9 +51,11 @@ const Results1 = () => {
         />
       </div>
       <br />
-      <div className="mt-20">
-        <p><button onClick={handleSaveRecommendations}>Save Recommendations</button></p>
-        <p>
+      <div className="mt-10">
+        <div><button className="bg-white ml-2 py-2 px-3 rounded shadow-md hover:bg-ocean" onClick={handleSaveRecommendations}>Save Recommendations</button>
+        {showText && <p>✓ Saved</p>}
+        </div>
+        <p className="mt-10">
           Click <Link to="/Homepage" className="underline">here</Link> to return home.
         </p>
       </div>
