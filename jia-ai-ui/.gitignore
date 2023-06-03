@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # MongoDB Project 
-jia-ai-ui/src/contexts/user.context.js
+jia-ai-ui/src/realms/constants.js
