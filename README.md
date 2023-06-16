@@ -2,7 +2,7 @@
 
 # JIA.ai Music Recommendation App
 
-JIA.ai is a web-based song recommendation application that utilizes OpenAI's API to generate song recommendations based on user input. The user can enter a specific song, artist, or genre, and the application will generate a list of recommended songs based on the user's input.
+JIA.ai is a web-based song recommendation application that utilizes OpenAI's API to generate song recommendations based on user input. The user can enter a specific song or select a genre, and the application will generate a list of recommended songs based on the user's input.
 
 ## Features
 
